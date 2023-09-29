@@ -1,6 +1,6 @@
 main{
     width: 90vw;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,13 +14,20 @@ main{
     width: 50%;
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 #imageSection{
     width: 50%;
+    height: auto;
+
 }
 .head{
 display: flex;
 flex-direction: column;
+width: 70%;
+}
+.head p , .head h1{
+    display: inline;
 }
 .head p{
     color:#667085;
@@ -39,21 +46,32 @@ article{
 input{
     border-radius: 2%;
 }
-.remember p{
+.remember {
     display:  flex;
     flex-direction: row;
     justify-content: space-between;
     width: 70%;
+} 
+.remember #forgot{
+    color:#5429FF;
 }
 .inputField{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  width:70%;
 
 }
 .inputField input{
-    width: 70%;
     height: 30px;
+}
+
+.signUp{
+    align-items: center;
+
+}
+.signUp b{
+    color:#5429FF
 }
 
 #imageSection img{

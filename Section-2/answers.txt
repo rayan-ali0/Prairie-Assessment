@@ -1,0 +1,93 @@
+CREATE table student(
+    studentNo INT PRIMARY KEY,
+    SSN INT ,
+    name TEXT,
+	studentDOB date,
+	skills VARCHAR,
+	cohortId INT,
+	FOREIGN KEY(cohortId) REFERENCES cohort	
+)
+
+INSERT INTO student(SSN,name,studentDOB,skills,cohortId)
+VALUES(2,"Rayan","01/01/1998","Management",04)
+
+CREATE table cohort(
+    cohortId INT PRIMARY KEY,
+    number INT ,
+    start_date date,
+	end_date date,
+	topics INT,
+	FOREIGN KEY(topics) REFERENCES topic
+	
+)
+CREATE table office(
+    officeId INT PRIMARY KEY
+)
+INSERT INTO office(officeId)
+Values(4)
+
+CREATE table mentor(
+    id INT PRIMARY KEY,
+    mentorName text,
+	DOB date,
+seniorityLevel text,
+	salary float,
+	officeId INT,
+	SSN INT,
+	depId INT ,
+	FOREIGN KEY(officeId) REFERENCES topic ,
+		FOREIGN KEY(depId) REFERENCES department 
+
+	
+)
+CREATE table topic(
+    topicId INT PRIMARY KEY,
+    title text,
+description varchar(100),
+id INT,
+	FOREIGN KEY(id) REFERENCES mentor 
+)
+
+CREATE table department(
+    depId INT PRIMARY KEY,
+    depName text,
+officeId INT,
+topicId INT,
+FOREIGN KEY(officeId) REFERENCES office ,
+FOREIGN KEY(topicId) REFERENCES topic 
+	
+)
+INSERT INTO department(depId,depName,officeId,topicId)
+Values(1,"tech",1,01)
+
+
+1.
+SELECT mentorName , seniorityLevel
+FROM mentor
+2.
+SELECT mentorName
+FROM mentor M
+WHERE offficeId=333
+
+3.
+SELECT *
+FROM mentor
+WHERE salary>1000
+
+4.SELECT mentorName , seniorityLevel
+FROM mentor
+WHERE salary>1000
+5.
+SELECT M.mentorName
+from mentor M, department D
+where M.depId= D.depId AND D.depName=“English & Life Skills”.
+
+6.
+SELECT studentNo
+from student
+where skills LIKE "%Development%"
+
+7.
+SELECT SSN
+from student
+where skills LIKE "%Development%"
