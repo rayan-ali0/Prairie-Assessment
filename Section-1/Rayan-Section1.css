@@ -1,0 +1,78 @@
+main{
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3%;
+    margin: auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+#loginSection{
+    /* border:1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#imageSection{
+    width: 50%;
+}
+.head{
+display: flex;
+flex-direction: column;
+}
+.head p{
+    color:#667085;
+    font-size: 20px;
+}
+h1{
+    font-size:35px;
+    color: #344054;
+}
+
+
+article{
+    width: 80%;
+    margin: 2%;
+}
+input{
+    border-radius: 2%;
+}
+.remember p{
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+.inputField{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.inputField input{
+    width: 70%;
+    height: 30px;
+}
+
+#imageSection img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 10%;
+}
+.signIn input{
+    background-color: #5429FF;
+
+}
+.signIn input::placeholder{
+    color: white;
+}
+.googleSign input{
+    border: 1px solid #667085 ;
+    background-color: #FFF;
+}
+.googleSign input::placeholder{
+   color:white;
+}
